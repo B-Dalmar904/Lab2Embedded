@@ -1,0 +1,23 @@
+
+			mov.b #0ABC1h, R4
+			mov.b #001C3h, R5
+			mov.b #04E52h, R6
+			mov.b #0000, R9
+
+			and R6, R4
+			and R6, R5
+
+			cmp R4,R6
+			jeq R4EqualR6
+			jmp $
+                                            
+R4EqualR6:
+
+			cmp R5,R6
+			jeq R5EqualR6
+			jmp $
+
+R5EqualR6:
+
+			mov.w #0ff0h, R9
+			jmp $

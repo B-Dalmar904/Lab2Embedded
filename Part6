@@ -1,0 +1,20 @@
+Main_loop:
+
+			mov.w #2D97h, R4
+			mov.w #6239h, R5
+
+			jmp androutine
+
+androutine:
+
+			and R4, R5
+			mov.w R5, R6
+
+			jmp orroutine
+
+orroutine:
+
+			bis #0000h, R6
+			mov.w R6, &203Ch
+
+			ret
